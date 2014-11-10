@@ -1,0 +1,25 @@
+
+<h3>Edit an author</h3>
+<form action="/authors/<%= @author.id %>" method="POST">
+	<input type="hidden" name="_method" value="PUT">
+
+	<label for="name">Your name:<br>
+		<input type="text" name="author[name]" value="<%= @author[:name] %>"><br>
+	</label>
+	<label for="photo_url">Your Photo Url:<br>
+		<input type="text" name="author[photo_url]" value="<%= @author[:photo_url] %>"><br>
+	</label>
+	<label for="date_joined">Today's Date:<br>
+		<input type="text" name="author[date_joined]" value="<%= @author[:date_joined] %>"><br>
+	<label for="age">Age?<br>
+		<input type="text" name="author[age]" value="<%= @author[:age] %>"><br>
+	<label for="age">username<br>
+		<input type="text" name="author[username]" value="<%= @author[:username] %>"><br>
+	</label>
+	<input type="submit" value="Submit">
+</form>
+
+<form action="/authors/<%= @author.id %>" method="POST">
+	<input type="hidden" name="_method" value="DELETE">
+	<button>Delete</button>
+</form>

@@ -1,0 +1,7 @@
+<link href='http://fonts.googleapis.com/css?family=Crafty+Girls|Alex+Brush|Calligraffitti|Lobster|Gloria+Hallelujah|Abel|La+Belle+Aurore|Architects+Daughter|Oswald' rel='stylesheet' type='text/css'>
+
+<p><a href="/microposts/new">Add a blog?</a></p>
+<% @microposts.each do |micropost| %>
+    <h1><%= micropost.author.name %> | <%= micropost.title %><h1> 
+		<a href="/microposts/<%= micropost.id %>">View the Blog</a>
+<% end %>

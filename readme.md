@@ -1,0 +1,3 @@
+This project is aimed to create a motivational blog. I've been writing motivational blogs for a year now using Google blogspot. This is something I intend on improving and working on to make it a live website later down the road. The blog gives ability to users to see the current authors and their blogs. It allows users to become an author. They can search blogs by tags and even delete tags. There are many great features that I will continue to improve. Authors are linked to their blogs so deleting an author will also delete their blog.
+
+Link for up-to-date ERD: http://i.imgur.com/oaokAPF.png

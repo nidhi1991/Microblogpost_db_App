@@ -1,0 +1,10 @@
+<br>
+<h3><p><a href="/authors/new">Become an author?</a></p><h3>
+<% @author.each do |author| %>
+	<div class="author">
+		<h1><a href='/authors/<%= author.id %>'><%= author.name %></a></h1>
+		<div class="img"><center> <img src="<%= author.photo_url %>" width=200 height=200>
+		</div>
+	</div>
+<% end %>
+

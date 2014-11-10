@@ -1,0 +1,46 @@
+<h3>Edit a micropost!</h3>
+<form action="/microposts/<%= @micropost.id %>" method="POST">
+	<input type="hidden" name="_method" value="PUT">
+
+	<label for="title">Title<br>
+		<input type="text" name="micropost[title]" value="<%= @micropost.title %>">
+	</label><br><br />
+
+	<label for="author">Author<br>
+		<select name="micropost[author_id]">
+			<% @authors.each do |author| %>
+				<option <%= "selected" if author == @micropost.author %> value="<%= author.id %>"><%= author.name %></option>			
+			<% end %>
+		</select>
+	</label><br><br />
+
+	<label for="date_created">Tag<br>
+		<table>
+			<% @tags.each do |tag| %>
+				<tr>
+					<td><input value="<%= tag.id %>" name='micropost[tags][]' type="checkbox" id='<%= tag.id %>' <%= @micropost.tags.include?(tag) ? 'checked' : '' %> /></td>
+					<td><label for='<%= tag.id %>'><%= tag.name %></label></td>
+				</tr>
+			<% end %>
+		</table>
+	</label><br><br />
+
+	<label for="date_created">Date Created<br>
+		<input type="text" name="micropost[date_created]" value="<%= @micropost.date_created %>">
+	</label><br>
+
+	<label for="time_created">Time Created<br>
+		<input type="text" name="micropost[time_created]" value="<%= @micropost.time_created %>">
+	</label><br>
+
+	<label for="content">Content<br>
+		<input type="text" name="micropost[content]" value="<%= @micropost.content %>">
+	</label><br>
+
+	<input type="submit" name="submit">
+</form>
+
+<form action="/microposts/<%= @micropost.id %>" method="POST">
+	<input type="hidden" name="_method" value="DELETE">
+	<button>Delete</button>
+</form>

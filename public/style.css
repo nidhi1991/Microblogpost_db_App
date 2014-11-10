@@ -1,0 +1,21 @@
+body {
+	background-image: url(http://i.imgur.com/wnboEs5.jpg);
+	color: #692961;
+	font-family: "La Belle Aurore";
+	font-style: bold;
+}
+
+div.img
+{
+margin: 2px;
+border: 0px solid #0000ff;
+height: auto;
+width: auto;
+text-align: center;
+}
+
+div.img img
+{
+display: inline;
+
+}

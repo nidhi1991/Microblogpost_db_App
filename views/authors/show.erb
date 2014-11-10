@@ -1,0 +1,15 @@
+<div id = "mainimage">
+	<h2><%= @author.name %></h2>
+	Age: <%= @author.age %><br>
+	<br>
+	Username: <%= @author.username%><br>
+	<br>
+	Date Joined: <%= @author.date_joined %><br>
+	<br>
+  <a href="/authors/<%= @author.id %>/edit">Edit</a>
+  <hr />
+  <b>Microposts:</b><br /><br />
+  <% @author.microposts.each do |mp| %>
+    <a href='/microposts/<%= mp.id %>'><%= mp.title %></a><br />
+  </div>
+  <% end %>

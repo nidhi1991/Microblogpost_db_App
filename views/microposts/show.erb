@@ -1,0 +1,18 @@
+<div style='font-size: 20px;'>
+	<h2><%= @micropost.title %></h2>
+	<p><%= @micropost.date_created %></p>
+	<p><%= @micropost.time_created %></p>
+	<p><%= @micropost.content %></p>
+
+  <p>Author: <a href='/authors/<%= @micropost.author.id %>'><%= @micropost.author.name %></a></p>
+
+  <p>Tags:<br/><br />
+    <% @micropost.tags.each do |tag| %>
+      <a href='/tags/search/<%= tag.name %>'><%= tag.name %></a>
+    <% end %>
+  </p>
+
+  <a href="/microposts/<%= @micropost.id %>/edit">Edit</a>
+  <hr />
+  <img src="<%= @micropost.author.photo_url %>" width='200' height:'200' />
+</div>

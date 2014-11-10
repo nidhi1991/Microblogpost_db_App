@@ -4,9 +4,9 @@ require 'active_record'
 
 # CONTROLLERS
 require_relative 'controllers/home_controller'
-require_relative 'controllers/artists_controller'
-require_relative 'controllers/songs_controller'
-require_relative 'controllers/playlists_controller'
+require_relative 'controllers/authors_controller'
+require_relative 'controllers/microposts_controller'
+require_relative 'controllers/tags_controller'
 
 require_relative 'models/author.rb'
 require_relative 'models/micropost.rb'

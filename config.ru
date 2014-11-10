@@ -8,9 +8,9 @@ require_relative 'controllers/artists_controller'
 require_relative 'controllers/songs_controller'
 require_relative 'controllers/playlists_controller'
 
-require_relative 'models/song.rb'
-require_relative 'models/artist.rb'
-require_relative 'models/playlist.rb'
+require_relative 'models/author.rb'
+require_relative 'models/micropost.rb'
+require_relative 'models/tag.rb'
 
 ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 after { ActiveRecord::Base.connection.close }
